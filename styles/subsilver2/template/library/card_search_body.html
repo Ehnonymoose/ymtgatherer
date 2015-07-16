@@ -1,0 +1,197 @@
+<!-- INCLUDE overall_header.html -->
+
+
+    <form method="post" action="{S_SEARCH_ACTION}" id="cardSearchForm">
+    
+    <table class="tablebg" cellspacing="1" style="margin: 0 auto">
+    <tr>
+        <th colspan="2">NGA Custom Card Search</th>
+    </tr>
+    <tr>
+        <td class="row1" style="text-align:center"><b class="genmed">Name:</b></td>
+        <td class="row2" valign="top"><input type="text" style="width: 400px" class="post" name="name" size="30" /></td>
+    </tr>
+    <tr>
+        <td class="row1" style="text-align:center"><b class="genmed">Rules text:</b></td>
+        <td class="row2" valign="middle"><input type="text" style="width: 400px" class="post" name="rules" size="30" /></td>
+    </tr>
+
+    <tr>
+        <td class="row1" style="text-align:center"><b class="genmed">Types:</b></td>
+        <td class="row2" valign="middle"><input type="text" style="width: 400px" class="post" name="types" size="30" /></td>
+    </tr>
+
+    <tr>
+        <td class="row1" style="text-align:center"><b class="genmed">Colors:</b></td>
+        <td class="row2" valign="middle">
+            <label><input type="checkbox" name="colors[]" value="w"> White</label>
+            <label><input type="checkbox" name="colors[]" value="u"> Blue</label>
+            <label><input type="checkbox" name="colors[]" value="b"> Black</label>
+            <label><input type="checkbox" name="colors[]" value="r"> Red</label>
+            <label><input type="checkbox" name="colors[]" value="g"> Green</label>
+            <br>
+            <label><input type="checkbox" name="colorless" value="1"> Colorless</label>
+            <label><input type="checkbox" name="multicolor" value="1"> Multicolor</label>
+            <label><input type="checkbox" name="color_strict" value="1"> Exclude unselected</label>
+        </td>
+    </tr>
+
+    <tr>
+        <td class="row1" style="text-align:center"><b class="genmed">Mana cost:</b></td>
+        <td class="row2"><input type="text" style="width: 400px" class="post" name="mana" size="30" /></td>
+    </tr>
+
+    <tr>
+        <td class="row1" style="text-align:center"><b class="genmed">Converted mana cost:</b></td>
+        <td class="row2">
+            <select name="cmc_compare">
+                <option value="eq">=</option>
+                <option value="lte">&le;</option>
+                <option value="gte">&ge;</option>
+                <option value="lt">&lt;</option>
+                <option value="gt">&gt;</option>
+            </select>
+            <select name="cmc">
+                <option></option>
+                <option>0</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+                <option>7</option>
+                <option>8</option>
+                <option>9</option>
+                <option>10</option>
+                <option>11</option>
+                <option>12</option>
+                <option>13</option>
+                <option>14</option>
+                <option>15</option>
+            </select>
+        </td>
+    </tr>
+
+
+    <tr>
+        <td class="row1" style="text-align:center"><b class="genmed">Power:</b></td>
+        <td class="row2">
+            <select name="pow_compare">
+                <option value="eq">=</option>
+                <option value="lte">&le;</option>
+                <option value="gte">&ge;</option>
+                <option value="lt">&lt;</option>
+                <option value="gt">&gt;</option>
+            </select>
+            <select name="pow">
+                <option></option>
+                <option>0</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+                <option>7</option>
+                <option>8</option>
+                <option>9</option>
+                <option>10</option>
+                <option>11</option>
+                <option>12</option>
+                <option>13</option>
+                <option>14</option>
+                <option>15</option>
+            </select>
+        </td>
+    </tr>
+
+        <tr>
+        <td class="row1" style="text-align:center"><b class="genmed">Toughness:</b></td>
+        <td class="row2">
+            <select name="tou_compare">
+                <option value="eq">=</option>
+                <option value="lte">&le;</option>
+                <option value="gte">&ge;</option>
+                <option value="lt">&lt;</option>
+                <option value="gt">&gt;</option>
+            </select>
+            <select name="tou">
+                <option></option>
+                <option>0</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+                <option>7</option>
+                <option>8</option>
+                <option>9</option>
+                <option>10</option>
+                <option>11</option>
+                <option>12</option>
+                <option>13</option>
+                <option>14</option>
+                <option>15</option>
+            </select>
+        </td>
+    </tr>
+    <tr>
+        <td class="row1" style="text-align:center"><b class="genmed">Rarity:</b></td>
+        <td class="row2">
+            <label><input type="checkbox" name="rarities[]" value="mythic"> Mythic Rare</label>&nbsp;&nbsp;
+            <label><input type="checkbox" name="rarities[]" value="rare"> Rare</label>&nbsp;&nbsp;
+            <label><input type="checkbox" name="rarities[]" value="uncommon"> Uncommon</label>&nbsp;&nbsp;
+            <label><input type="checkbox" name="rarities[]" value="common"> Common</label>
+            <label><input type="checkbox" name="rarities[]" value="basic"> Basic</label>
+        </td>
+    </tr>
+    <tr>
+        <td class="row1" style="text-align:center"><b class="genmed">Banned:</b></td>
+        <td class="row2">
+            <select name="banned">
+                <option value="n">No</option>
+                <option value="y">Yes</option>
+                <option value="">Either</option>
+            </select>
+        </td>
+    </tr>
+    <tr>
+        <td class="row1" style="text-align:center"><b class="genmed">Set:</b></td>
+        <td class="row2">
+            <select multiple name="sets[]" style="height:120px">
+                {S_SET_LIST}
+            </select>
+            <span style="font-size:80%;font-style:italic;display:table-cell;vertical-align:middle;">Use CTRL and SHIFT to select multiple sets</span>
+        </td>
+    </tr>
+
+
+    <tr>
+        <td class="cat" colspan="4" align="center">
+            <input class="btnmain" onclick="doSearch(0)" type="button" value="Search" />
+
+            <input name="random" type="hidden" id="randomField" value="0" />
+            <input class="btnmain" onclick="doSearch(1)" type="button" value="Random Card" />
+<script>
+function doSearch(random) {
+    document.getElementById('randomField').value = random;
+    document.getElementById('cardSearchForm').submit();
+};
+
+$('#cardSearchForm').find('input').keypress(function(e) {
+    // Enter pressed?
+    if(e.which == 10 || e.which == 13) {
+        doSearch();
+    }
+});
+</script>
+        </td>
+    </tr>
+    </table>
+    
+    </form>
+
+<!-- INCLUDE jumpbox.html -->
+<!-- INCLUDE overall_footer.html -->

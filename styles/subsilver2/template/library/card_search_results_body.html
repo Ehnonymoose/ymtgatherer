@@ -1,0 +1,53 @@
+<!-- INCLUDE overall_header.html -->
+
+
+<table class="tablebg" cellspacing="1" style="margin: 0 auto; width: 66%; line-height:1.4em;">
+    <tr>
+        <th colspan="2">Search Results</th>
+    </tr>
+
+    <!-- IF SEARCH_RESULT_COUNT eq 0 -->
+    <tr align="center" colspan="2">
+        <br/>
+        <b>No results found.</b>
+        <br/>
+    </tr>
+    <!-- ELSE -->
+
+        <tr>
+            <td class="cat">
+                <div style="float:left;">Results {SEARCH_RESULT_START}-{SEARCH_RESULT_END} of {SEARCH_RESULT_COUNT}</div>
+                <div style="float:right"><!-- INCLUDE pagination.html -->&nbsp;&nbsp;</div>
+            </td>
+        </tr>
+
+        <!-- BEGIN searchresults -->
+            <tr>
+                <td class="row1 postbody">
+                    <div style="margin: 0 10%">
+                        <span style="font-size:1.1em;font-weight:bold;"><a href="{searchresults.URL}">{searchresults.CARD_NAME}</a></span>&nbsp;&nbsp;{searchresults.CARD_MANA}<br/>
+                        <span style="font-weight:bold;">{searchresults.CARD_TYPES}</span>&nbsp;&nbsp; <!-- IF searchresults.S_IS_CREATURE -->({searchresults.CARD_POWER}/{searchresults.CARD_TOUGHNESS})<!-- ELSEIF searchresults.CARD_LOYALTY -->[{searchresults.CARD_LOYALTY}]<!-- ENDIF --><!-- IF searchresults.CARD_RARITY -->&nbsp;&nbsp;({searchresults.CARD_RARITY})<!-- ENDIF --><br/>                        {searchresults.CARD_TEXT}
+                    </div>
+                </td>
+                <!-- IF 0 -->
+                <td class="row1" align="center">
+                    <img src="http://forum.nogoblinsallowed.com/images/icons/mtg/{searchresults.CARD_SET}_{searchresults.CARD_RARITY}.png">
+                </td>
+                <!-- ENDIF -->
+            </tr>
+        <!-- END searchresults -->
+
+        <!-- IF SEARCH_RESULT_COUNT ge 5 -->
+        <tr>
+            <td class="cat" colspan="2">
+                <div style="float:left;">Results {SEARCH_RESULT_START}-{SEARCH_RESULT_END} of {SEARCH_RESULT_COUNT}</div>
+                <div style="float:right"><!-- INCLUDE pagination.html -->&nbsp;&nbsp;</div>
+            </td>
+        </tr>
+        <!-- ENDIF -->
+
+    <!-- ENDIF -->
+
+</table>
+
+<!-- INCLUDE overall_footer.html -->

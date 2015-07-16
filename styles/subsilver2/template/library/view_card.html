@@ -1,0 +1,61 @@
+<!-- INCLUDE overall_header.html -->
+
+<table class="tablebg postbody" cellspacing="1" style="width: 66%; margin:0 auto;">
+    <tr>
+        <th colspan="2">Card</th>
+    </tr>
+
+    <td class="row1">{S_RENDER_HTML}</td>
+    <td class="row1" width="100%" style="vertical-align: top">
+        <table class="tablebg" cellspacing="1">
+            <tr>
+                <td class="row2">Card name:</td>
+                <td class="row1">{S_NAME}</td>
+            </tr>
+            <tr>
+                <td class="row2">Mana cost:</td>
+                <td class="row1">{S_MANA}</td>
+            </tr>
+            <tr>
+                <td class="row2">Converted mana cost:</td>
+                <td class="row1">{S_CMC}</td>
+            </tr>
+            <tr>
+                <td class="row2">Types:</td>
+                <td class="row1">{S_TYPES}</td>
+            </tr>
+            <tr>
+                <td class="row2">Rules text:</td>
+                <td class="row1" style="font-size: 1em;">{S_RULES_TEXT}</td>
+            </tr>
+            <tr>
+                <td class="row2">Sets:</td>
+                <td class="row1">{S_SETS}</td>
+            </tr>
+            <!-- IF S_FLAVOR_TEXT -->
+            <tr>
+                <td class="row2">Flavor text:</td>
+                <td class="row1">{S_FLAVOR_TEXT}</td>
+            </tr>
+            <!-- ENDIF -->
+            <!-- IF S_IS_CREATURE -->
+            <tr>
+                <td class="row2">P/T:</td>
+                <td class="row1">{S_SIZE}</td>
+            </tr>
+            <!-- ENDIF -->
+            <!-- IF S_IS_BANNED -->
+            <tr>
+                <td class="row2">Banned in:</td>
+                <td class="row1">NGA Constructed</td>
+            </tr>
+            <!-- ENDIF -->
+            <tr>
+                <td class="row2">Rarity:</td>
+                <td class="row1">{S_RARITY}</td>
+            </tr>
+        </table>
+    </td>
+</table>
+
+<!-- INCLUDE overall_footer.html -->            
